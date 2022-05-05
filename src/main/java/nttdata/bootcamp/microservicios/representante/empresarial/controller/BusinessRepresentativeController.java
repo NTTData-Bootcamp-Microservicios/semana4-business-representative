@@ -58,19 +58,10 @@ public class BusinessRepresentativeController {
 	@GetMapping("/corporate-client/{corporateClientId}")
 	public ResponseEntity<Flux<?>> searchbyCorporateClientIdAll(@PathVariable String corporateClientId) {
 
-		/*
-		 * BusinessRepresentative busyx = new BusinessRepresentative();
-		 * List<BusinessRepresentative> bussinesslist = new ArrayList<>();
-		 */
 
 		Flux<BusinessRepresentative> newBusinessRepresentative = service.findByCorporateClientId(corporateClientId);
 
-		/*
-		 * Flux<BusinessRepresentative> newBusinessRepresentativex =
-		 * 
-		 * Mono.just(bussinesslist).doOnNext(x -> { x.add(busyx);
-		 * }).flatMapMany(Flux::fromIterable);
-		 */
+
 
 		if (newBusinessRepresentative != null) {
 
