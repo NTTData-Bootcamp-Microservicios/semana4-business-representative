@@ -11,7 +11,8 @@ spring:
     image:
      location: classpath:fotocreador/microservicios.png  
      
-     
+  kafka:
+    bootstrap-servers: LIM-8VD52F3.usersad.everis.int:9092      
 config:
  balanceador:
   test: prueba balanceador de microservicio-representante-empresarial   
